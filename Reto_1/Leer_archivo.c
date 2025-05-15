@@ -24,8 +24,7 @@ int main() {
     }
 
     
-    fread(contenido, sizeof(char), tamano, archivo);
-    contenido[tamano];
+    char *fgets (char *string, int n, FILE *stream);
 
     printf("\n Contenido del archivo:\n%s\n", contenido);
 
