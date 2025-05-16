@@ -5,7 +5,7 @@ int main() {
     char nombreArchivo[100];
     FILE *archivo;
     char *contenido;
-    long tamano;
+    int tamano;
 
     printf("Ingrese el nombre del archivo .txt a leer: ");
     scanf("%s", nombreArchivo); 
@@ -24,7 +24,7 @@ int main() {
     }
 
     
-    char *fgets (char *string, int n, FILE *stream);
+    char *fgets (char *contenido, int n, FILE *archivo);
 
     printf("\n Contenido del archivo:\n%s\n", contenido);
 
