@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h> // Para funciones como isspace()
 
 void menu();
 
@@ -20,10 +19,9 @@ int main(int argc, char const *argv[]) {
     int totalEspacios = 0;
     int totalLineas = 0;
     FILE *archivo;
-    int enPalabra = 0; // Bandera para indicar si estamos dentro de una palabra
 
     menu();
-    printf("Para contar caracteres, ¿desea incluir los saltos de linea?\n Ingrese 1 para si, 2 para no: ");
+    printf("Para contar caracteres, ¿desea incluir los saltos de linea? \n Ingrese 1 para si, 2 para no: ");
     scanf("%d", &opcion);
 
     printf("Ingrese el nombre del archivo .txt a leer: ");
@@ -38,15 +36,14 @@ int main(int argc, char const *argv[]) {
     while ((caracter = fgetc(archivo)) != EOF) {
         if (opcion == 1) {
             totalCaracteres++;
-        }
-
-        else if (caracter != '\n') {
+        } else if (caracter != '\n') {
             totalCaracteres++;
         }
 
         if (caracter == ' ' || caracter == '\t' || caracter == '\n') {
             totalEspacios++;
-            enPalabra = 0; // Terminó una palabra
+            totalPalabras++;
+        }
 
         if (caracter == '\n') {
             totalLineas++;
