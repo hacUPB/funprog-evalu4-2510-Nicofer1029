@@ -10,8 +10,8 @@ int main(void)
     menu();
     scanf("%d", &opcion);
     
-        switch (opcion)
-    {
+    switch (opcion){
+    
     case 1:
     printf("Calcular estadisticas del texto \n");    
     break;

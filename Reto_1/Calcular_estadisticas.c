@@ -20,7 +20,11 @@ int main(int argc, char const *argv[]) {
     int totalLineas = 0;
     FILE *archivo;
 
+
+    printf("Calcular estadisticas del texto \n"); 
+
     menu();
+       
     printf("Para contar caracteres, ¿desea incluir los saltos de linea? \n Ingrese 1 para si, 2 para no: ");
     scanf("%d", &opcion);
 
