@@ -189,5 +189,120 @@ A continuacion se mostrara cada uno de los psudocodigos de las funciones:
     Mostrar los totales calculados: caracteres, palabras, espacios y líneas
     Fin
 
+### Parte 4:
 
+    Inicio
+    Inicializar contadores total_A, total_E, total_I, total_O, total_U en 0
+
+    Pedir nombre del archivo
+
+    Abrir archivo en modo lectura
+    Si no se puede abrir
+        Mostrar error
+        Terminar proceso
+    Fin si
+
+    Mientras no se llegue al final del archivo
+        Leer un carácter
+
+        Si carácter es 'a' o 'A'
+            Incrementar total_A
+        Fin si
+
+        Si carácter es 'e' o 'E'
+            Incrementar total_E
+        Fin si
+
+        Si carácter es 'i' o 'I'
+            Incrementar total_I
+        Fin si
+
+        Si carácter es 'o' o 'O'
+            Incrementar total_O
+        Fin si
+
+        Si carácter es 'u' o 'U'
+            Incrementar total_U
+        Fin si
+    Fin mientras
+
+    Cerrar archivo
+
+    Mostrar totales para A, E, I, O, U
+    Fin
+
+### Parte 5:
+
+    Inicio
+    Pedir nombre del archivo de texto
+    Abrir archivo en modo lectura
+    Si no se puede abrir
+        Mostrar error y terminar
+    Fin si
+
+    Obtener tamaño del archivo
+    Reservar memoria para almacenar el texto completo
+
+    Leer todo el contenido del archivo en memoria
+    Cerrar archivo
+
+    Pedir palabra a buscar
+    Pedir palabra por la cual se reemplazará
+
+    Contar cuántas veces aparece la palabra original en el texto
+
+    Calcular nuevo tamaño para texto modificado según cantidad de reemplazos y tamaño de palabra nueva
+
+    Reservar memoria para nuevo texto modificado
+
+    Recorrer el texto original carácter por carácter
+        Si en la posición actual aparece la palabra original
+            Copiar palabra nueva en el texto modificado
+            Avanzar el cursor del texto original en el largo de la palabra original
+            Avanzar cursor del texto modificado en el largo de la palabra nueva
+        Sino
+            Copiar carácter actual al texto modificado
+            Avanzar un carácter en ambos textos
+    Fin recorrer
+
+    Terminar cadena del texto modificado con carácter nulo
+
+    Mostrar texto modificado
+
+    Liberar memoria
+    Fin
+
+### Parte 6:
+
+    Inicio
+    Suponemos que tenemos el texto modificado en memoria
+
+    Llamar función calcular_estadisticas con el texto modificado para obtener:
+        - cantidad de caracteres
+        - cantidad de palabras
+        - cantidad de espacios
+        - cantidad de líneas
+
+    Llamar función frecuencia_vocales con el texto modificado para obtener:
+        - frecuencia de 'a'
+        - frecuencia de 'e'
+        - frecuencia de 'i'
+        - frecuencia de 'o'
+        - frecuencia de 'u'
+
+    Pedir al usuario el nombre del archivo donde guardar resultados
+    Abrir archivo en modo escritura
+    Si no se puede abrir archivo
+        Mostrar error y terminar
+    Fin si
+
+    Escribir en el archivo:
+        - Estadísticas del texto (caracteres, palabras, espacios, líneas)
+        - Frecuencia de vocales (a, e, i, o, u)
+        - Texto modificado completo
+
+    Cerrar archivo
+
+    Mostrar mensaje confirmando que resultados fueron guardados
+    Fin
 
